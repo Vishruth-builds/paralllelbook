@@ -2,8 +2,8 @@
   "Baseline / Global Contention": {
     "transactions": 8,
     "traces_matched": 8,
-    "unique_slots": 41,
-    "shared_slots": 1,
+    "unique_slots": 36,
+    "shared_slots": 6,
     "potential_conflict_pairs": 28
   },
   "ParallelBook / Independent Shards": {

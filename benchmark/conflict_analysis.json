@@ -1,0 +1,20 @@
+{
+  "BASELINE": {
+    "transactions": 10,
+    "unique_slots": 62,
+    "shared_slots": 1,
+    "conflicts": 28
+  },
+  "PARALLELBOOK": {
+    "transactions": 10,
+    "unique_slots": 76,
+    "shared_slots": 0,
+    "conflicts": 0
+  },
+  "HOT_SHARD": {
+    "transactions": 11,
+    "unique_slots": 60,
+    "shared_slots": 5,
+    "conflicts": 29
+  }
+}

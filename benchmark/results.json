@@ -1,0 +1,188 @@
+[
+  {
+    "name": "Baseline / Global Contention",
+    "total_time": 2.7138497829437256,
+    "results": [
+      {
+        "success": true,
+        "hash": "0xf608f8a3a81245d500bab808d13cc752fbccea3c3190a759b7a82a70df041555",
+        "block": "0x40f8e3c",
+        "gas": "0x206c3",
+        "latency": 1.9336326122283936
+      },
+      {
+        "success": true,
+        "hash": "0x3fce1c0a2d0e22d7e784d27d78cc4102f8c7cb841e94b5ee5ad31885d639524a",
+        "block": "0x40f8e3c",
+        "gas": "0x206c3",
+        "latency": 2.115678071975708
+      },
+      {
+        "success": true,
+        "hash": "0x0ab71edf798df88d760da021a5c1a7357c27e2b0537d61b5d24b31239d9ec22a",
+        "block": "0x40f8e3c",
+        "gas": "0x206c3",
+        "latency": 2.1127662658691406
+      },
+      {
+        "success": true,
+        "hash": "0x012f0247ea2c9810d97e255324acf9139ad7ca70a8bbfc95cc16ce0821abdda1",
+        "block": "0x40f8e3c",
+        "gas": "0x206c3",
+        "latency": 2.1224639415740967
+      },
+      {
+        "success": true,
+        "hash": "0xa672bb971fcd78a15cd485753d43914a4c5c31764fee08b9d890ee7232bd0333",
+        "block": "0x40f8e3c",
+        "gas": "0x206c3",
+        "latency": 2.11893892288208
+      },
+      {
+        "success": true,
+        "hash": "0x18a59f54312f466bd7619892b2f04939202522d84fc0230db38484f885392416",
+        "block": "0x40f8e3c",
+        "gas": "0x206c3",
+        "latency": 2.153204917907715
+      },
+      {
+        "success": true,
+        "hash": "0x4ad24c12a898455ca67e0a788c9fae6a04f5ed2e522e9ea105972b53141b51d0",
+        "block": "0x40f8e3c",
+        "gas": "0x206c3",
+        "latency": 2.203352928161621
+      },
+      {
+        "success": true,
+        "hash": "0xc490ec8091a796ce6f59cae9a6c9ffc57360627da9d7848e029b4d884eccdf6b",
+        "block": "0x40f8e3d",
+        "gas": "0x206c3",
+        "latency": 2.7077643871307373
+      }
+    ]
+  },
+  {
+    "name": "ParallelBook / Independent Shards",
+    "total_time": 2.626565456390381,
+    "results": [
+      {
+        "success": true,
+        "hash": "0xb0085ab066770ca02565633f71c73d951665198a9eb835543e4819b6275fd14a",
+        "block": "0x40f8e45",
+        "gas": "0x24d3a",
+        "latency": 2.114497661590576
+      },
+      {
+        "success": true,
+        "hash": "0x492ff95b6980e1009a207af394963568980eb927343270225ecca3ee0a1699b4",
+        "block": "0x40f8e46",
+        "gas": "0x27c4e",
+        "latency": 2.258084774017334
+      },
+      {
+        "success": true,
+        "hash": "0x65262ba36d02448c510ef747da7292e1a828f5e19a3ba043a5b4ced92a1af0ed",
+        "block": "0x40f8e46",
+        "gas": "0x24d3a",
+        "latency": 2.2818610668182373
+      },
+      {
+        "success": true,
+        "hash": "0x426eb4a5112b961d3b16c713c22a9f90b44020e514256074808bfa67c3cfaae7",
+        "block": "0x40f8e46",
+        "gas": "0x24d3a",
+        "latency": 2.3066067695617676
+      },
+      {
+        "success": true,
+        "hash": "0x74be10f492db63794d28a45efb439f77039ca8d3080fe8cafe75b26ebf824b17",
+        "block": "0x40f8e46",
+        "gas": "0x24d3a",
+        "latency": 2.3088173866271973
+      },
+      {
+        "success": true,
+        "hash": "0x5224f9d03f7896d73ef10d5d38193fcfe6c76c4e16c795a39a9c35679c70fe0b",
+        "block": "0x40f8e46",
+        "gas": "0x20a76",
+        "latency": 2.3945720195770264
+      },
+      {
+        "success": true,
+        "hash": "0x1a8f5571eae1c3ed4f2774e033f08c89f368a68801e4b138d27451929c49c60f",
+        "block": "0x40f8e47",
+        "gas": "0x24d3a",
+        "latency": 2.6053555011749268
+      },
+      {
+        "success": true,
+        "hash": "0x8a47d9af98e858b6662541ee519513864ade7ff561f99751691e55780f81cd56",
+        "block": "0x40f8e47",
+        "gas": "0x24d2e",
+        "latency": 2.619852304458618
+      }
+    ]
+  },
+  {
+    "name": "ParallelBook / Hot Shard",
+    "total_time": 2.1312255859375,
+    "results": [
+      {
+        "success": true,
+        "hash": "0x73ef973bf4ef331415dae295709100fe3e1b68220377e75bcaa96cc8811b1632",
+        "block": "0x40f8e4e",
+        "gas": "0x20a8e",
+        "latency": 1.9971764087677002
+      },
+      {
+        "success": true,
+        "hash": "0xe8a94bfb55bc4a861fa673582529e562730436af0eaeeff0950f967ee03bca07",
+        "block": "0x40f8e4e",
+        "gas": "0x20a8e",
+        "latency": 2.0073153972625732
+      },
+      {
+        "success": true,
+        "hash": "0x5bf76bc6a763b4155e316bdd4b629eb6bf1a04989e1f1ebf40013a9c3e753087",
+        "block": "0x40f8e4e",
+        "gas": "0x20a8e",
+        "latency": 2.01035737991333
+      },
+      {
+        "success": true,
+        "hash": "0x430b69f1707508430a668c54518cb0c47317b3207b48e203c7142df31246f30b",
+        "block": "0x40f8e4e",
+        "gas": "0x20a8e",
+        "latency": 2.0263428688049316
+      },
+      {
+        "success": true,
+        "hash": "0xe99b0cddfea5077ad9c14d5617f02c699ad4ef72aaf0fc7c36981df450104685",
+        "block": "0x40f8e4e",
+        "gas": "0x20a8e",
+        "latency": 2.0279541015625
+      },
+      {
+        "success": true,
+        "hash": "0x463cab9ec710e755361e32231baedccf4912dac63f53e70908fdc5130899e302",
+        "block": "0x40f8e4e",
+        "gas": "0x20a8e",
+        "latency": 2.040647506713867
+      },
+      {
+        "success": true,
+        "hash": "0xa1c060a2ad465906eea68befbdfdb5218fc8c73f3f2278357b8d7507b76aae2f",
+        "block": "0x40f8e4e",
+        "gas": "0x20a8e",
+        "latency": 2.0772547721862793
+      },
+      {
+        "success": true,
+        "hash": "0x2762aae98ce152928f8a22f308540dfaf7f979f829ff6635471bf1bb78fa5319",
+        "block": "0x40f8e4e",
+        "gas": "0x20a8e",
+        "latency": 2.1178853511810303
+      }
+    ]
+  }
+]

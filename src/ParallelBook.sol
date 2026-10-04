@@ -1,17 +1,23 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.28;
 
-/// @notice MVP execution-aware orderbook.
+/// @notice Execution-aware orderbook.
 /// Price ranges map to independent shards. Each shard owns its own order ID
-/// counter and order storage, avoiding a single global counter hot spot.
+/// counter and order storage, reducing contention from a single global counter.
 contract ParallelBook {
     uint256 public constant SHARD_WIDTH = 100;
+
+    enum Side {
+        BUY,
+        SELL
+    }
 
     struct Order {
         uint256 id;
         address trader;
         uint256 price;
         uint256 amount;
+        Side side;
         bool active;
     }
 
@@ -28,15 +34,17 @@ contract ParallelBook {
         uint256 indexed id,
         address indexed trader,
         uint256 price,
-        uint256 amount
+        uint256 amount,
+        Side side
     );
+
     event OrderCancelled(uint256 indexed shardId, uint256 indexed id);
 
     function shardFor(uint256 price) public pure returns (uint256) {
         return price / SHARD_WIDTH;
     }
 
-    function place(uint256 price, uint256 amount)
+    function place(uint256 price, uint256 amount, Side side)
         external
         returns (uint256 shardId, uint256 id)
     {
@@ -51,10 +59,18 @@ contract ParallelBook {
             trader: msg.sender,
             price: price,
             amount: amount,
+            side: side,
             active: true
         });
 
-        emit OrderPlaced(shardId, id, msg.sender, price, amount);
+        emit OrderPlaced(
+            shardId,
+            id,
+            msg.sender,
+            price,
+            amount,
+            side
+        );
     }
 
     function cancel(uint256 shardId, uint256 id) external {
