@@ -1,0 +1,23 @@
+{
+  "Baseline / Global Contention": {
+    "transactions": 8,
+    "traces_matched": 8,
+    "unique_slots": 41,
+    "shared_slots": 1,
+    "potential_conflict_pairs": 28
+  },
+  "ParallelBook / Independent Shards": {
+    "transactions": 8,
+    "traces_matched": 8,
+    "unique_slots": 56,
+    "shared_slots": 0,
+    "potential_conflict_pairs": 0
+  },
+  "ParallelBook / Hot Shard": {
+    "transactions": 8,
+    "traces_matched": 8,
+    "unique_slots": 42,
+    "shared_slots": 2,
+    "potential_conflict_pairs": 28
+  }
+}
