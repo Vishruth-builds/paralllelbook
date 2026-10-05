@@ -1,36 +1,26 @@
 # ParallelBook
 
-Monad-native execution-aware CLOB prototype.
+> **Don't just run faster. Trade in parallel.**
 
-## Thesis
-ParallelBook partitions limit-order state into independent price shards. The first MVP intentionally focuses on **limit-order placement/cancellation workloads** where independent orders touch independent storage. Cross-shard market matching is a later milestone.
+ParallelBook is a Monad-native, execution-aware central limit order book (CLOB) prototype designed around **parallel execution**.
 
-The benchmark compares:
-1. BaselineBook: one shared order counter/state path.
-2. ParallelBook: per-shard counters/state.
+Instead of putting all order-placement state behind one global counter and storage path, ParallelBook partitions order state into **price-based shards**. Transactions targeting different price ranges can therefore operate on independent storage state.
 
-The goal is to measure state contention/re-execution behavior on Monad under identical workloads, not to claim a generic TPS improvement.
+The project demonstrates this design on Monad testnet with a baseline orderbook, a sharded ParallelBook, concurrent transaction workloads, and storage-trace analysis.
 
-## Network
-Monad Testnet:
-- Chain ID: 10143
-- RPC: https://testnet-rpc.monad.xyz
-- Explorer: https://testnet.monadexplorer.com
+---
 
-## MVP milestones
-- [x] Contract skeleton
-- [x] Baseline shared-state book
-- [x] Sharded book
-- [x] Foundry tests
-- [ ] Deploy to Monad testnet
-- [ ] Concurrent transaction generator
-- [ ] Receipt/block benchmark collector
-- [ ] Frontend benchmark dashboard
-- [ ] Cross-shard matching
+## The idea
 
-## Commands
+Traditional onchain orderbooks often use shared global state.
 
-```bash
-forge build
-forge test -vv
-```
+A simplified placement flow looks like:
+
+```text
+place order
+    |
+    v
+global nextOrderId
+    |
+    v
+global order storage
